@@ -1,0 +1,25 @@
+<div class="container" [formGroup]="signupForm">
+    <div class="frame">
+        <div class="title">Sign up</div>
+        <div class="row row-2">
+            <div>
+                <div class="input-name">Firstname:</div>
+                <div><input class="inp" type="email" formControlName="firstname"> </div>
+            </div>
+            <div>
+                <div class="input-name">Lastname:</div>
+                <div><input class="inp" type="email" formControlName="lastname"> </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-name">Email ID:</div>
+            <div><input class="inp" type="email" formControlName="email"> </div>
+        </div>
+        <div class="row">
+            <div class="input-name">Password:</div>
+            <div><input class="inp" type="password" formControlName="password"> </div>
+        </div>
+        <div class="submit btn" (click)="submit()">Signup</div>
+    </div>
+</div>
