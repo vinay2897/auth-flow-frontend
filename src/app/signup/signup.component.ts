@@ -28,6 +28,9 @@ export class SignupComponent implements OnInit {
     console.log(this.signupForm.value)
     this.authService.signup(this.signupForm.value).subscribe(res => {
       console.log(res)
+      if(res["code"] === 1){
+        this.router.navigate(["/login"])
+      }
     }, err => {
       console.log(err)
     })

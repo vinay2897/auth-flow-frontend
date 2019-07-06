@@ -1,1 +1,2 @@
-<p>profile works!</p>
+<div class="btn" (click)="getDetails()">Get Details</div>
+<div *ngIf="firstname && lastname" class="name"> {{ firstname + ' ' + lastname }}</div>

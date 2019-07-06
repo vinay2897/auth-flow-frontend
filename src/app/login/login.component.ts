@@ -23,6 +23,10 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value)
     this.authService.login(this.loginForm.value).subscribe(res => {
       console.log(res)
+      if(res["code"] === 1){
+        this.authService.isLoggedIn = true;
+        this.router.navigate(["/profile"])
+      }
     }, err => {
       console.log(err)
     })
